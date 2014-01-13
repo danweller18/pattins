@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Pattins::Application.config.secret_key_base = '6b2c5ae00a34db54e4a3c1ebbb90840fdd7eb61c5f09c9262a87ea163ab6508aa12e83ae255186515df05b1acedd0e77b8a46a425b1ebcb0184184483b1ace09'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Pattins::Application.config.secret_key_base = secure_token
