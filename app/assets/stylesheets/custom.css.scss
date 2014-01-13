@@ -1,0 +1,203 @@
+@import "bootstrap";
+body {  padding-top: 85px;}
+@import "bootstrap-responsive";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+
+/**-------Bootstrap CSS--------------*/
+/*nav bar color */
+.navbar-inner {
+  background: white !important;
+  border: 1 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  /* navbar get rid of round edges-------*/
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/*height of navbar in full browser mode */
+@media(min-width:768px){
+.navbar .navbar-inner {min-height:75px;}
+}
+
+/* slide down whole page and center nav top in middle */
+.container {
+      margin-top: 5px;
+}
+
+
+/**-----------End of Bootstrap CSS----------------*/
+
+
+/******Contact page ****/
+/*title for all pages*/
+.title {
+  float: left;
+}
+
+/* contact hidden field */
+.hidden { display: none; }
+
+/*Contact form size*/
+.contact {
+  textarea {
+   height: 150px;
+   width: 500px;
+  }
+}
+
+/* Contact */
+.hours {
+  width: 90%;
+  text-align: center;
+  td {
+    text-align: center;
+  }
+}
+/*END OF CONTACT*/
+
+
+/*Home page content css*/
+.home {
+  h1 {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  h2 {
+    margin-bottom: 10px;
+    text-align: left;
+    letter-spacing: -1px;
+  }
+  p {
+    margin-left: 100px;
+  }
+}
+
+
+/*slogan navbar*/
+.slogan {
+  margin-top: 10px;
+  margin-left: -175px;
+  float: left;
+}
+
+
+/* universal */
+html {
+  overflow-y: scroll;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: gray;
+    text-decoration: none;
+  }
+}
+
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }

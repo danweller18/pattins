@@ -1,0 +1,56 @@
+<% provide(:title, 'Contact') %>
+
+<div>
+  <div class="title">
+    <h1>Contact Us</h1>
+  </div>
+  <div align="center">
+    <table class= "hours">
+      <thead>
+        <tr>
+          <th>Our Office Hours</th>
+          <th>Phone Numbers</th>
+          <th>We Are Located At:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday - Friday</td>
+          <td>Baltimore: (410) 551-8959</td>
+          <td>1413-B Annapolis Road</td>
+        </tr>
+        <tr>
+          <td>9:00 AM - 5:00 PM</td>
+          <td>Washington: (301) 621-0994</td>
+          <td>Suite 203</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Fax: (410) 551-8785</td>
+          <td>Odenton, MD 21113-1216</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>History</h2>
+
+    <p>Since 1958 Patterson Insurance has been serving Anne Arundel County and the surrounding areas since 1958. Founded by Earl Patterson, Patterson Insurance  </p>
+
+    <hr>
+    <h3>Want to reach us after hours?</h3><h4>Send us a message</h4><p>We will get back to you as soon as possible!</p>
+    <div class= "contact">
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+        <%= f.input :name, :required => true %>
+        <%= f.input :email, :required => true %>
+        <%= f.input :message, :as => :text, :required => true %>
+        <div class="hidden">
+          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+        </div>
+        <div>
+          </br>
+          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

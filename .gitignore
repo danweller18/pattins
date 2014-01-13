@@ -24,3 +24,7 @@ doc/
 .DS_Store
 .idea
 .secret
+
+#hide the local variables
+.env
+Procfile
