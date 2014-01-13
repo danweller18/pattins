@@ -1,5 +1,5 @@
 @import "bootstrap";
-body {  padding-top: 85px;}
+body {  padding-top: 85px;  gridGutterWidth: 30px;}
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
@@ -147,22 +147,32 @@ p {
 }
 
 
+
 /* footer */
 footer {
   margin-top: 45px;
-  padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
+
+  .navbar-inner1 {
+    padding-top: 100px;
+    margin-bottom: -20px;
+    background: #0000CC;
+  }
+
   a {
-    color: $gray;
+    color: $white;
     &:hover {
-      color: $grayDarker;
+      color: $grayLight;
     }
   }
   small {
+    margin-left: 15px;
+    color: $white;
     float: left;
   }
   ul {
+    margin-right: 15px;
     float: right;
     list-style: none;
     li {
