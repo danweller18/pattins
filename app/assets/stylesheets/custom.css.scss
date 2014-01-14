@@ -1,10 +1,19 @@
 @import "bootstrap";
-body {  padding-top: 85px;  gridGutterWidth: 30px;}
+body {  padding-top: 85px;}
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+
+/*Mobile tablet and phone looks*/
+@media(max-width:767px){
+  .footer {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+}
 
 
 /**-------Bootstrap CSS--------------*/
@@ -29,8 +38,6 @@ $grayMediumLight: #eaeaea;
 .container {
       margin-top: 5px;
 }
-
-
 /**-----------End of Bootstrap CSS----------------*/
 
 
